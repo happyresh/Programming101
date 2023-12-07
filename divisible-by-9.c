@@ -17,6 +17,5 @@ int main() {
     } else {
         printf("The number you entered is not non-divisible by 9.\n");
     }
-    
 return 0;
 }

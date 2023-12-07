@@ -1,55 +1,52 @@
 #include <stdio.h>
 #include <math.h>
 
-
 int main() {
-    // Initialization of the program
-    int diameter;
-    float price, area, price_per_sq_inch;
+    // Initialization of variables
+    float diameter1, diameter2, diameter3, price1, price2, price3, area1, area2, area3, price_per_sq_inch1, price_per_sq_inch2, price_per_sq_inch3;
+    
+    // Input for pizza diameters
+    printf("Enter the diameter of the first pizza: ");
+    scanf("%f", &diameter1);
 
-    // Input for the program
-    printf("Enter the diameter of the pizza: ");
-    scanf("%d", &diameter);
+    printf("Enter the diameter of the second pizza: ");
+    scanf("%f", &diameter2);
 
-    // Calculate area of the pizza
-    area = 3.14159* pow(diameter / 2.0, 2);
+    printf("Enter the diameter of the third pizza: ");
+    scanf("%f", &diameter3);
 
-    printf("Enter the price of the pizza: ");
-    scanf("%f", &price);
+    // Calculate area of the pizzas
+    area1 = 3.14 * pow(diameter1 / 2.0, 2);
+    area2 = 3.14 * pow(diameter2 / 2.0, 2);
+    area3 = 3.14 * pow(diameter3 / 2.0, 2);
+
+    // Input for pizza prices
+    printf("Enter the price of the first pizza: ");
+    scanf("%f", &price1);
+
+    printf("Enter the price of the second pizza: ");
+    scanf("%f", &price2);
+
+    printf("Enter the price of the third pizza: ");
+    scanf("%f", &price3);
 
     // Calculate price per square inch
-    price_per_sq_inch = price / area;
+    price_per_sq_inch1 = price1 / area1;
+    price_per_sq_inch2 = price2 / area2;
+    price_per_sq_inch3 = price3 / area3;
 
-    printf("Area of the pizza: %.2f square inches\n", area);
-    printf("Price per square inch: %.2f pesos/sq inch\n", price_per_sq_inch);
+    // Display the results
+    printf("Pizza with %.2f inch diameter costs %.2f pesos per square inch.\n", diameter1, price_per_sq_inch1);
+    printf("Pizza with %.2f inch diameter costs %.2f pesos per square inch.\n", diameter2, price_per_sq_inch2);
+    printf("Pizza with %.2f inch diameter costs %.2f pesos per square inch.\n", diameter3, price_per_sq_inch3);
 
-    // Determine the least expensive option
-    if (diameter = 10) {
-        if (price_per_sq_inch <= 0)
-            printf("Invalid price or diameter entered.\n");
-        else if (price_per_sq_inch <= 178 / area)
-            printf("Domino's 10-inch pizza is the least expensive.\n");
-        else if (price_per_sq_inch <= 259 / area)
-            printf("Domino's 12-inch pizza is the least expensive.\n");
-        else
-            printf("Domino's 14-inch pizza is the least expensive.\n");
-    } else if (diameter = 12) {
-        if (price_per_sq_inch <= 259 / area)
-            printf("Domino's 12-inch pizza is the least expensive.\n");
-        else if (price_per_sq_inch <= 178 / area)
-            printf("Domino's 10-inch pizza is the least expensive.\n");
-        else if (price_per_sq_inch <= 314 / area)
-            printf("Domino's 14-inch pizza is the least expensive.\n");
-    } else if (diameter = 14) {
-        if (price_per_sq_inch <= 314 / area)
-            printf("Domino's 14-inch pizza is the least expensive.\n");
-        else if (price_per_sq_inch <= 259 / area)
-            printf("Domino's 12-inch pizza is the least expensive.\n");
-        else if (price_per_sq_inch <= 178 / area)
-            printf("Domino's 10-inch pizza is the least expensive.\n");
-    } else {
-        printf("Invalid diameter entered.\n");
+    // Determine the least expensive pizza
+    if (price_per_sq_inch1 < price_per_sq_inch2 && price_per_sq_inch1 < price_per_sq_inch3) {
+        printf("The least expensive pizza has a diameter of %.2f inches.\n", diameter1);
+    } else if (price_per_sq_inch2 < price_per_sq_inch1 && price_per_sq_inch2 < price_per_sq_inch3) {
+        printf("The least expensive pizza has a diameter of %.2f inches.\n", diameter2);
+    } else if (price_per_sq_inch3 < price_per_sq_inch1 && price_per_sq_inch3 < price_per_sq_inch2) {
+        printf("The least expensive pizza has a diameter of %.2f inches.\n", diameter3);
     }
-
     return 0;
 }
