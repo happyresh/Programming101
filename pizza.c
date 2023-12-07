@@ -3,9 +3,11 @@
 
 
 int main() {
+    // Initialization of the program
     int diameter;
     float price, area, price_per_sq_inch;
 
+    // Input for the program
     printf("Enter the diameter of the pizza: ");
     scanf("%d", &diameter);
 

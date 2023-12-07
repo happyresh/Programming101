@@ -1,8 +1,10 @@
 #include <stdio.h>      
 
 int main() {
-   float days_late=0;
+    // Initialization of the program
+    float days_late=0;
 
+    // Input for the program 
     printf("Please enter the number of days late when returning the CD: ");
     scanf("%f", &days_late);
     
@@ -19,6 +21,5 @@ int main() {
     	// // If the days late is more than 6 days, the fine is 250.00.
         printf("Your fine is 250.00");
     }
-
 return 0;
 }
