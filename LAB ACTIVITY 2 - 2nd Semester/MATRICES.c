@@ -61,7 +61,7 @@ int main() {
         scanf(" %c", &repeat);
     } while (repeat == 'y' || repeat == 'Y');
 
-    printf("Program ended.\n");
+    printf("\nThank you for using the program.\n");
 
     return 0;
 }
