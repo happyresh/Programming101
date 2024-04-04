@@ -1,5 +1,17 @@
 #include <stdio.h>
 
+void DESCENDING(int arr[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (arr[j] < arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
 int main() {
     char repeat;
     
@@ -35,6 +47,9 @@ int main() {
             }
         }
 
+        // Sort ArrayC in descending order
+        DESCENDING(ArrayC, size);
+
         // Print Arrays
         printf("\nArrayA: ");
         for (int i = 0; i < size; i++) {
@@ -50,7 +65,7 @@ int main() {
             printf("\n");
         }
 
-        printf("\nArrayC: ");
+        printf("\nSorted ArrayC (in descending order): ");
         for (int i = 0; i < size; i++) {
             printf("%d ", ArrayC[i]);
         }
@@ -61,7 +76,7 @@ int main() {
         scanf(" %c", &repeat);
     } while (repeat == 'y' || repeat == 'Y');
 
-    printf("Program ended.\n");
+    printf("\nThank you for using the program.\n");
 
     return 0;
 }
