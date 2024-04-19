@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main() {
+    char repeat = 'y';
+    
+    while (repeat == 'y' || repeat == 'Y') {
+        int r, c;
+        printf("Enter the size of the row and column of the array (must be positive integer): ");
+        scanf("%d", &r);
+        printf("Enter the size of the column of the array (must be positive integer): ");
+        scanf("%d", &c);
+        
+        // Define and initialize Array based on user input size
+        int array_SQUARE[r][c];
+       
+        // Input values for Array Square
+        printf("Enter values for Array Square (%d integers):\n", r * c);
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                scanf("%d", &array_SQUARE[i][j]);
+            }
+        }
+        
+        // Print Original Array
+        printf("\nOriginal Array:\n");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                printf("%4d ", array_SQUARE[i][j]);
+            }
+            printf("\n");
+        }
+        
+        // Print Array Square
+        printf("\nArray Square:\n");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                printf("%4d ", array_SQUARE[i][j] * array_SQUARE[i][j]);
+            }
+            printf("\n");
+        }
+        
+        // Ask if the user wants to repeat the process
+        printf("\nDo you want to repeat the process? (y/n): ");
+        scanf(" %c", &repeat);
+    }
+    
+    printf("Program ended.\n");
+    
+    return 0;
+}
