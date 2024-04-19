@@ -4,27 +4,27 @@ int main() {
     char repeat = 'y';
     
     while (repeat == 'y' || repeat == 'Y') {
-        int r, c;
+        int row, column;
         printf("Enter the size of the row and column of the array (must be positive integer): ");
-        scanf("%d", &r);
+        scanf("%d", &row);
         printf("Enter the size of the column of the array (must be positive integer): ");
-        scanf("%d", &c);
+        scanf("%d", &column);
         
         // Define and initialize Array based on user input size
-        int array_SQUARE[r][c];
+        int array_SQUARE[row][column];
        
         // Input values for Array Square
-        printf("Enter values for Array Square (%d integers):\n", r * c);
-        for (int i = 0; i < r; i++) {
-            for (int j = 0; j < c; j++) {
+        printf("Enter values for Array Square (%d integers):\n", row * column);
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
                 scanf("%d", &array_SQUARE[i][j]);
             }
         }
         
         // Print Original Array
         printf("\nOriginal Array:\n");
-        for (int i = 0; i < r; i++) {
-            for (int j = 0; j < c; j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
                 printf("%4d ", array_SQUARE[i][j]);
             }
             printf("\n");
@@ -32,8 +32,8 @@ int main() {
         
         // Print Array Square
         printf("\nArray Square:\n");
-        for (int i = 0; i < r; i++) {
-            for (int j = 0; j < c; j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
                 printf("%4d ", array_SQUARE[i][j] * array_SQUARE[i][j]);
             }
             printf("\n");
