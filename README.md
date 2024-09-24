@@ -104,9 +104,3 @@ int main() {
 
 - **Eliniel Recio** ([happyresh](https://github.com/happyresh))  
 - **Sandy Lorraine** ([ssamdy](https://github.com/ssamdy))
-
----
-
-## 📄 License
-
-This repository is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
